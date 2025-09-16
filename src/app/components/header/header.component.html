@@ -1,0 +1,47 @@
+<header>
+  <div class="header-container container">
+    <div class="left-side">
+      <a href="#"><h1 class="logo">snap</h1></a>
+
+      <nav>
+        <ul>
+          <!-- Features dropdown -->
+          <li>
+            <app-dropdown
+              title="Features"
+              [items]="[
+                { icon: 'icon-todo.svg', label: 'Todo List' },
+                { icon: 'icon-calendar.svg', label: 'Calendar' },
+                { icon: 'icon-reminders.svg', label: 'Reminders' },
+                { icon: 'icon-planning.svg', label: 'Planning' }
+              ]"
+            >
+            </app-dropdown>
+          </li>
+
+          <!-- Company dropdown -->
+          <li>
+            <app-dropdown
+              title="Company"
+              [items]="[
+                { label: 'History' },
+                { label: 'Our Team' },
+                { label: 'Blog' }
+              ]"
+            >
+            </app-dropdown>
+          </li>
+
+          <!-- Simple links -->
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="auth">
+      <a class="btn login-btn" href="#">Login</a>
+      <a class="btn reg-btn" href="#">Register</a>
+    </div>
+  </div>
+</header>

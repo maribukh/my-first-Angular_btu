@@ -1,0 +1,21 @@
+<div
+  class="dropdown"
+  (mouseenter)="isOpen = true"
+  (mouseleave)="isOpen = false"
+>
+  <!-- Кнопка -->
+  <button class="dropdown-btn" (click)="toggleDropdown()">
+    {{ title }}
+    <span class="arrow" [class.open]="isOpen"
+      ><img src="icon-arrow-down.svg" alt=""
+    /></span>
+  </button>
+
+  <!-- Выпадающее меню -->
+  <ul class="dropdown-menu" *ngIf="isOpen">
+    <li *ngFor="let item of items">
+      <img *ngIf="item.icon" [src]="item.icon" alt="{{ item.label }} icon" />
+      <span>{{ item.label }}</span>
+    </li>
+  </ul>
+</div>

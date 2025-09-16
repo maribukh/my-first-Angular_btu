@@ -1,0 +1,54 @@
+:root {
+  --gray-50: hsl(0, 0%, 98%);
+  --gray-500: hsl(0, 0%, 41%);
+  --gray-950: hsl(0, 0%, 8%);
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray-950);
+}
+
+header {
+  .header-container {
+    padding: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-side {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      nav {
+        margin-left: 3.5rem;
+        ul {
+          width: 100%;
+          gap: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            color: var(--gray-500);
+            cursor: pointer;
+
+            &:hover {
+              color: var(--gray-950);
+            }
+          }
+        }
+      }
+    }
+    .auth {
+      .reg-btn {
+        border: 1px solid var(--gray-950);
+        margin-left: 2rem;
+      }
+    }
+  }
+}
