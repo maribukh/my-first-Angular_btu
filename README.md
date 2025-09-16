@@ -1,59 +1,40 @@
-# MyAngularApp
+# Frontend Mentor - Intro section with dropdown navigation (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5).
 
-## Development server
+## 📌 Overview
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Links
+- Live Site URL: [Vercel Deployment](https://my-first-angular-btu.vercel.app/#)
+- Solution URL: [GitHub Repo]([https://github.com/maribukh](https://github.com/maribukh/my-first-Angular_btu)) 
+## 💻 My Process
 
-## Code scaffolding
+### Built with
+- Angular
+- TypeScript
+- SCSS
+- Semantic HTML5 markup
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### What I learned
+This was my **first Angular project** 🎉  
+I had previously built the same challenge in **React**, and rebuilding it in Angular helped me:
+- Understand component structure in Angular
+- Work with `@Input()` to create reusable dropdowns
+- Manage active/hover states with TypeScript and SCSS
 
-```bash
-ng generate component component-name
-```
+### Continued development
+- Add responsiveness (currently only desktop version)
+- Deploy both Angular and React versions to compare
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Useful resources
+- [Angular Docs](https://angular.dev/) – helped me with components and bindings
+- [Frontend Mentor](https://www.frontendmentor.io) – for providing this challenge
 
-```bash
-ng generate --help
-```
+## 👩‍💻 Author
+- Frontend Mentor – [@maribukh](https://www.frontendmentor.io/profile/maribukh)
+- GitHub – [@maribukh](https://github.com/maribukh)
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📄 Acknowledgments
+Thanks to **Frontend Mentor** for this challenge!

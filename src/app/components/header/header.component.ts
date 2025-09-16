@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DropdownComponent } from '../dropdown/dropdown.component';
+import { DropdownComponent } from '../ui/dropdown/dropdown.component';
 
 @Component({
   selector: 'app-header',

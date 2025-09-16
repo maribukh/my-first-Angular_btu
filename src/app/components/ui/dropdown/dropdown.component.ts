@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
-// Интерфейс должен быть выше декоратора
 interface DropdownItem {
-  icon?: string; // путь к иконке (опционально)
-  label: string; // текст пункта
+  icon?: string; 
+  label: string;
 }
 
 @Component({
