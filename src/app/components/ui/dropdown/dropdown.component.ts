@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, ElementRef, HostListener } from '@angular/core';
 
 interface DropdownItem {
   icon?: string;
@@ -14,10 +14,17 @@ interface DropdownItem {
   styleUrls: ['./dropdown.component.scss'],
 })
 export class DropdownComponent {
-  // @Input() items: DropdownItem[] = [];
   @Input() variant: 'Features' | 'Company' = 'Features';
-
   isOpen = false;
+
+  constructor(private elementRef: ElementRef) {}
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    if (!this.elementRef.nativeElement.contains(event.target) && this.isOpen) {
+      this.isOpen = false;
+    }
+  }
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;
