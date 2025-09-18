@@ -1,31 +1,45 @@
+<div class="overlay" [class.active]="isMenuOpen" (click)="toggleMenu()"></div>
+
 <header>
   <div class="header-container container">
     <div class="left-side">
       <a href="#"><h1 class="logo">snap</h1></a>
 
-      <nav class="d-none">
+      <nav class="desktop-nav">
         <ul>
-          <!-- Features dropdown -->
-          <li>
-            <app-dropdown variant="Features"></app-dropdown>
-          </li>
-
-          <!-- Company dropdown -->
-          <li>
-            <app-dropdown variant="Company"> </app-dropdown>
-          </li>
-
-          <!-- Simple links -->
-          <li>Careers</li>
-          <li>About</li>
+          <li><app-dropdown variant="Features"></app-dropdown></li>
+          <li><app-dropdown variant="Company"></app-dropdown></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
         </ul>
       </nav>
     </div>
 
-    <div class="auth d-none">
+    <div class="auth desktop-auth">
       <a class="btn login-btn" href="#">Login</a>
       <a class="btn reg-btn" href="#">Register</a>
     </div>
-    <img class="menu" src="icon-menu.svg" alt="menu" />
+
+    <div class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+      <img *ngIf="!isMenuOpen" src="icon-menu.svg" alt="Open menu" />
+    </div>
   </div>
 </header>
+
+<div class="mobile-nav" [class.active]="isMenuOpen">
+  <img class="close-icon" *ngIf="isMenuOpen" src="icon-close-menu.svg" alt="Close menu" />
+
+  <nav>
+    <ul>
+      <li><app-dropdown variant="Features"></app-dropdown></li>
+      <li><app-dropdown variant="Company"></app-dropdown></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="auth mobile-auth">
+    <a class="btn login-btn" href="#">Login</a>
+    <a class="btn reg-btn" href="#">Register</a>
+  </div>
+</div>
