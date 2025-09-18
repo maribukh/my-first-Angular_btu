@@ -4,15 +4,20 @@
   (mouseleave)="isOpen = false"
 >
   <button class="dropdown-btn" (click)="toggleDropdown()">
-    {{ title }}
+    {{ variant }}
     <span class="arrow" [class.open]="isOpen"
       ><img src="icon-arrow-down.svg" alt=""
     /></span>
   </button>
 
-  <ul class="dropdown-menu" *ngIf="isOpen">
-    <li *ngFor="let item of items">
+  <ul class="dropdown-menu" *ngIf="isOpen && variant === 'Features'">
+    <li *ngFor="let item of Features">
       <img *ngIf="item.icon" [src]="item.icon" alt="{{ item.label }} icon" />
+      <span>{{ item.label }}</span>
+    </li>
+  </ul>
+  <ul class="dropdown-menu" *ngIf="isOpen && variant === 'Company'">
+    <li *ngFor="let item of Company">
       <span>{{ item.label }}</span>
     </li>
   </ul>

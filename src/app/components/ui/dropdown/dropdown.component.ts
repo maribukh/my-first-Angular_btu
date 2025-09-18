@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 interface DropdownItem {
-  icon?: string; 
+  icon?: string;
   label: string;
 }
 
@@ -14,11 +14,21 @@ interface DropdownItem {
   styleUrls: ['./dropdown.component.scss'],
 })
 export class DropdownComponent {
-  @Input() title!: string;
-  @Input() items: DropdownItem[] = [];
+  // @Input() items: DropdownItem[] = [];
+  @Input() variant: 'Features' | 'Company' = 'Features';
+
   isOpen = false;
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;
   }
+
+  Features = [
+    { icon: 'icon-todo.svg', label: 'Todo List' },
+    { icon: 'icon-calendar.svg', label: 'Calendar' },
+    { icon: 'icon-reminders.svg', label: 'Reminders' },
+    { icon: 'icon-planning.svg', label: 'Planning' },
+  ];
+
+  Company = [{ label: 'History' }, { label: 'Our Team' }, { label: 'Blog' }];
 }
