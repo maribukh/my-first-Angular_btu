@@ -76,7 +76,6 @@ a {
   }
 }
 
-/* Header styles (Mobile First) */
 header {
   .header-container {
     padding: 1rem 0rem;
@@ -173,4 +172,38 @@ header {
   position: absolute;
   top: 16px;
   right: 16px;
+
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  span {
+    font-family: "Epilogue";
+  }
+  .mobile-nav {
+    nav {
+      ul {
+        li {
+          color: var(--gray-500) !important;
+
+          &:hover {
+            color: var(--gray-950);
+          }
+        }
+        a {
+          color: var(--gray-500) !important;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .mobile-auth {
+    a {
+      color: var(--gray-500) !important;
+      font-size: 16px;
+    }
+  }
 }

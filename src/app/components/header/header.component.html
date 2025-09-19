@@ -3,7 +3,7 @@
 <header>
   <div class="header-container container">
     <div class="left-side">
-      <a href="#"><h1 class="logo">snap</h1></a>
+      <a class="logo" href="#"><h1>snap</h1></a>
 
       <nav class="desktop-nav">
         <ul>
@@ -27,7 +27,13 @@
 </header>
 
 <div class="mobile-nav" [class.active]="isMenuOpen">
-  <img class="close-icon" *ngIf="isMenuOpen" src="icon-close-menu.svg" alt="Close menu" />
+  <img
+    (click)="toggleMenu()"
+    class="close-icon"
+    *ngIf="isMenuOpen"
+    src="icon-close-menu.svg"
+    alt="Close menu"
+  />
 
   <nav>
     <ul>

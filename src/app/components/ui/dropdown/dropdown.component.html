@@ -6,14 +6,40 @@
     </span>
   </button>
 
-  <ul class="dropdown-menu" *ngIf="isOpen && variant === 'Features'">
+  <ul
+    class="dropdown-desk dropdown-menu"
+    *ngIf="isOpen && variant === 'Features'"
+  >
     <li *ngFor="let item of Features">
       <img *ngIf="item.icon" [src]="item.icon" alt="{{ item.label }} icon" />
       <span>{{ item.label }}</span>
     </li>
   </ul>
 
-  <ul class="dropdown-menu" *ngIf="isOpen && variant === 'Company'">
+  <ul
+    class="dropdown-desk dropdown-menu"
+    *ngIf="isOpen && variant === 'Company'"
+  >
+    <li *ngFor="let item of Company">
+      <span>{{ item.label }}</span>
+    </li>
+  </ul>
+
+  <!--dropdown for mobiles -->
+  <ul
+    class="dropdown-menu dropdown-menu-mobile d-none"
+    *ngIf="isOpen && variant === 'Features'"
+  >
+    <li *ngFor="let item of Features">
+      <img *ngIf="item.icon" [src]="item.icon" alt="{{ item.label }} icon" />
+      <span>{{ item.label }}</span>
+    </li>
+  </ul>
+
+  <ul
+    class="dropdown-menu dropdown-menu-mobile d-none"
+    *ngIf="isOpen && variant === 'Company'"
+  >
     <li *ngFor="let item of Company">
       <span>{{ item.label }}</span>
     </li>

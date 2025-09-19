@@ -23,15 +23,16 @@
       }
     }
   }
-
-  .dropdown-menu {
+  .dropdown-desk {
     position: absolute;
     top: 100%;
     left: 0;
-    margin-top: 10px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .dropdown-menu {
+    margin-top: 10px;
     padding: 12px;
     list-style: none;
     min-width: 160px;
@@ -56,6 +57,22 @@
         width: 18px;
         height: 18px;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .dropdown {
+    .dropdown-desk {
+      display: none;
+    }
+
+    .dropdown-menu-mobile {
+      display: block;
+    }
+
+    .dropdown-btn {
+      font-size: 16px;
     }
   }
 }
